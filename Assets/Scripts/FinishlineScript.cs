@@ -12,12 +12,14 @@ public class FinishlineScript : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("You WIN! (Pick your next level.. Press Tab for Level1 and Down for Level2 :)");
-
-            if(Input.GetKeyDown(one))
-                SceneManager.LoadScene(level1);
-            if(Input.GetKeyDown(two))
-                SceneManager.LoadScene(level2);
+            Debug.Log("You WIN! (Pick your next level.. Press Tab for Level1 and Down for Level2 :)");   
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(Input.GetKeyDown(one))
+            SceneManager.LoadScene(level1);
+        if(Input.GetKeyDown(two))
+            SceneManager.LoadScene(level2);
     }
 }
