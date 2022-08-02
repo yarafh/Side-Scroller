@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody>();
-        rb.AddForce(Vector3.right * bulletSpeed);
+        rb.AddForce(transform.forward * bulletSpeed);
 
         Invoke("Delete", bulletLifeSpan);
     }
