@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FallDetection : MonoBehaviour
 {
-    Vector3 Checkpoint;
+    [SerializeField] Vector3 Checkpoint;
     void Start()
     {
-        Checkpoint=new Vector3(470,1,168);
+        //Checkpoint=new Vector3(470,1,168);
     }
 
     // Update is called once per frame

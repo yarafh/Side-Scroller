@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Gem
   - Hazard
+  - Enemy
   layers:
   - Default
   - TransparentFX
