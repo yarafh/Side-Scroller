@@ -18,6 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     void FixedUpdate()
     {
+        Debug.Log("Health: "+health);
         if(health<=0) 
             Die();   
     }
