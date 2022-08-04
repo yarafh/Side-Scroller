@@ -8,6 +8,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject bullet;
     private Transform player;
     private bool detected=false;
+    public AudioSource turretSound;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class Turret : MonoBehaviour
 
     private void Shooting()
     {
+        turretSound.Play();
         Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
     }
 }

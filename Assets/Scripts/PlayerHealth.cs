@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     [SerializeField] private Transform spawnPoint;
     private Transform enemy;
-    
+    public AudioSource failureSound;
     private void Start()
     {
         rb=GetComponent<Rigidbody>();
@@ -25,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        failureSound.Play();
         transform.position=spawnPoint.position;
         health=3;
     }
